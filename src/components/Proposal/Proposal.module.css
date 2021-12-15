@@ -1,0 +1,115 @@
+.proposal {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 40px;
+
+  justify-items: center;
+}
+
+@media (min-width: 1051px) {
+  .proposal {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+}
+
+.right {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+}
+
+@media (min-width: 1051px) {
+  .right {
+    order: 1;
+  }
+}
+
+.illustration {
+  max-width: 603px;
+  min-width: 330px;
+  width: 100%;
+  height: auto;
+  order: 1;
+}
+
+.list {
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  gap: 60px;
+  margin-top: 15px;
+}
+
+.list + .buttonLink {
+  margin-top: 70px;
+}
+.button {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 13px;
+  align-items: center;
+  text-decoration: none;
+  font-size: 21px;
+  line-height: 25px;
+  font-weight: 500;
+  color: #333333;
+  transition: 0.3s;
+  border: none;
+  background-color: none;
+  background: none;
+  cursor: pointer;
+  justify-items: start;
+  width: 100%;
+  cursor: pointer;
+}
+
+.arrow {
+  transform: rotate(+90deg);
+}
+
+.content {
+  height: 0;
+  overflow: hidden;
+}
+
+.text {
+  margin: 0;
+  margin-top: 20px;
+  margin-left: 52px;
+  margin-right: 18px;
+}
+
+.button:hover {
+  color: #13ab4e;
+}
+
+.isOpen .button {
+  color: #13ab4e;
+}
+
+@media (min-width: 1051px) {
+  .Steps-work-2_link {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+.item {
+  padding-left: 15px;
+  position: relative;
+  align-content: center;
+  display: grid;
+}
+
+.item::after {
+  display: block;
+  content: "";
+  background-color: #dedede;
+  width: 100%;
+  height: 1px;
+
+  margin-top: 24px;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+}

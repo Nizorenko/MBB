@@ -1,0 +1,176 @@
+/* Footer */
+
+.section {
+  background-color: #25322e;
+  padding-top: 60px;
+  padding-bottom: 50px;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: auto;
+  row-gap: 35px;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+
+@media (min-width: 1051px) {
+  .footer {
+    grid-template-columns: 27% auto;
+    column-gap: 77px;
+    text-align: start;
+  }
+}
+
+.about {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  row-gap: 15px;
+  justify-items: start;
+  text-align: start;
+}
+
+@media (min-width: 650px) {
+  .about {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    row-gap: 15px;
+    justify-items: center;
+  }
+}
+
+@media (min-width: 1051px) {
+  .about {
+    grid-template-rows: auto 1fr 1fr;
+    row-gap: 24px;
+    text-align: start;
+    justify-items: start;
+  }
+}
+
+.aboutText {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+/* Ссылки с навигацие */
+
+.box {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  justify-items: center;
+  row-gap: 30px;
+  column-gap: 20px;
+  justify-items: start;
+}
+
+@media (min-width: 650px) {
+  .box {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 2fr 2fr;
+    grid-template-rows: none;
+    gap: 72px;
+  }
+}
+
+@media (min-width: 1051px) {
+  .box {
+    grid-template-columns: auto auto auto auto;
+  }
+}
+
+.title {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 10px;
+}
+
+.item {
+  text-decoration: none;
+
+  font-size: 14px;
+  line-height: 40px;
+  font-weight: 400;
+}
+
+.link {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.link:hover {
+  color: rgba(255, 255, 255, 1);
+  text-decoration: underline;
+}
+
+.infoList {
+  text-align: start;
+}
+
+.infoTitle {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 20px;
+}
+
+.infoText {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+/* Авторские права */
+
+.copyright {
+  background-color: #1c2d29;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #dcf3e5;
+}
+
+.copyrightBox {
+  display: grid;
+  grid-template-columns: auto;
+  justify-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+@media (min-width: 1051px) {
+  .copyrightBox {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    gap: 40px;
+  }
+}
+
+.copyright .infoText {
+  margin: 0;
+  padding: 10px 0;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.text {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.textOrder {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  order: -1;
+}
+/* Для изменениния положения строк */
+
+@media (min-width: 1051px) {
+  .textOrder {
+    order: 1;
+  }
+}

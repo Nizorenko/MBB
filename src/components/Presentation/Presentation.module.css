@@ -1,0 +1,26 @@
+/* Секция с видео */
+
+.Presentation {
+  display: grid;
+  grid-template-columns: auto;
+  justify-items: center;
+  text-align: center;
+}
+
+.PresentationTitle {
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+.PresentationText {
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+.PresentationVideo {
+  max-width: 675px;
+  min-width: 180px;
+  width: 100%;
+  height: auto;
+  margin-top: 16px;
+}

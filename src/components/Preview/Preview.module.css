@@ -1,0 +1,163 @@
+.containerPreview {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+.preview {
+  text-align: center;
+}
+
+.previewTitle {
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+/* Навигация списка  */
+
+.navList {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+
+  justify-content: center;
+
+  white-space: nowrap;
+
+  border-radius: 75px;
+  background-color: #dcf3e5;
+
+  margin-bottom: 32px;
+  margin-top: 16px;
+  padding: 0 15px;
+}
+
+.navBtn {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 8px;
+  padding: 15px 23px;
+
+  align-items: center;
+  justify-items: center;
+
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+
+  text-transform: capitalize;
+  color: #333333;
+
+  background-color: #dcf3e5;
+  border: none;
+  cursor: pointer;
+  border-radius: 75px;
+}
+
+.navBtn:hover {
+  color: #13ab4e;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 75px;
+  background: rgba(255, 255, 255, 1);
+}
+
+.navBtn.isOpenTab {
+  color: #13ab4e;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 75px;
+  background: rgba(255, 255, 255, 1);
+}
+
+/* Карточка элемента списка */
+
+.card {
+  margin-bottom: 50px;
+}
+
+.cardList {
+  position: relative;
+  min-height: 750px;
+}
+
+.cardItem {
+  position: absolute;
+
+  opacity: 0;
+  transition: transform 0.7s linear;
+  transform: translateX(-250px);
+}
+
+.cardItem.isOpenTab {
+  display: block;
+  opacity: 1;
+
+  transition: 0.7s linear;
+  transform: translateX(0px);
+}
+
+.cardText {
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+.cardLink {
+  color: #13ab4e;
+}
+
+.cardIllustration {
+  max-width: 837px;
+  min-width: 320px;
+  width: 100%;
+  height: auto;
+}
+
+/* Статистика */
+
+.gradeList {
+  display: grid;
+  grid-template-columns: auto;
+  row-gap: 20px;
+  column-gap: 40px;
+  max-width: 880px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+@media (min-width: 650px) {
+  .gradeList {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+.gradeText {
+  text-align: center;
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+@media (min-width: 650px) {
+  .gradeText {
+    grid-column: span 3;
+  }
+}
+
+.gradeItem {
+  display: grid;
+  grid-template-columns: auto;
+  white-space: nowrap;
+}
+
+.gradeNumber {
+  font-size: 44px;
+  line-height: 66px;
+  font-weight: 700;
+  color: #13ab4e;
+}
+
+.gradeName {
+  font-size: 18px;
+  line-height: 36px;
+  font-weight: 400;
+  text-transform: none;
+  color: #333333;
+}
