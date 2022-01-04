@@ -16,109 +16,115 @@ export const Footer: FC<FooterProps> = ({ className, openPopup }) => {
     <footer className={className}>
       <Container>
         <div className={css.nav}>
-          <div className={css.headerBox}>
-            <h2 className={css.header}>Каталог товаров</h2>
+          <div>
+            <div className={css.navLeft}>
+              <div>
+                <h2 className={css.header}>Каталог товаров</h2>
+              </div>
+              <ul>
+                <li>
+                  <a className={css.link} href="#">
+                    <h3 className={css.subtitle}>Модульные диваны</h3>
+                  </a>
+                </li>
+                <li>
+                  <a className={css.link} href="#">
+                    <h3 className={css.subtitle}>Диваны</h3>
+                  </a>
+                </li>
+                <li>
+                  <a className={css.link} href="#">
+                    <h3 className={css.subtitle}>Классическая мебель</h3>
+                  </a>
+                </li>
+                <li>
+                  <a className={css.link} href="#">
+                    <h3 className={css.subtitle}>Малогабритные диваны</h3>
+                  </a>
+                </li>
+                <li>
+                  <a className={css.link} href="#">
+                    <h3 className={css.subtitle}>Кровати</h3>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className={css.navLeft}>
+              <div className={css.headerBox}>
+                <h2 className={css.header}>Информация</h2>
+              </div>
+              <ul>
+                <li>
+                  <a className={css.link} href="#">
+                    <h3 className={css.subtitle}>О компании</h3>
+                  </a>
+                </li>
+                <li>
+                  <a className={css.link} href="#">
+                    <h3 className={css.subtitle}>Где купить</h3>
+                  </a>
+                </li>
+                <li>
+                  <a className={css.link} href="#">
+                    <h3 className={css.subtitle}>Салоны</h3>
+                  </a>
+                </li>
+                <li>
+                  <a className={css.link} href="#">
+                    <h3 className={css.subtitle}>Новости</h3>
+                  </a>
+                </li>
+                <li>
+                  <a className={css.link} href="#">
+                    <h3 className={css.subtitle}>Вакансии</h3>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <ul>
-            <li>
-              <a className={css.link} href="#">
-                <h3 className={css.subtitle}>Модульные диваны</h3>
-              </a>
-            </li>
-            <li>
-              <a className={css.link} href="#">
-                <h3 className={css.subtitle}>Диваны</h3>
-              </a>
-            </li>
-            <li>
-              <a className={css.link} href="#">
-                <h3 className={css.subtitle}>Классическая мебель</h3>
-              </a>
-            </li>
-            <li>
-              <a className={css.link} href="#">
-                <h3 className={css.subtitle}>Малогабритные диваны</h3>
-              </a>
-            </li>
-            <li>
-              <a className={css.link} href="#">
-                <h3 className={css.subtitle}>Кровати</h3>
-              </a>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <a className={css.link} href="#">
-                <h3 className={css.subtitle}>Новинки</h3>
-              </a>
-            </li>
-            <li>
-              <a className={css.link} href="#">
-                <h3 className={css.subtitle}>Кресла</h3>
-              </a>
-            </li>
-            <li>
-              <a className={css.link} href="#">
-                <h3 className={css.subtitle}>Бескаркасная мебель</h3>
-              </a>
-            </li>
-            <li>
-              <a className={css.link} href="#">
-                <h3 className={css.subtitle}>Аксессуары</h3>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div className={css.nav}>
-          <div className={css.headerBox}>
-            <h2 className={css.header}>Информация</h2>
-          </div>
-          <ul>
-            <li>
-              <a className={css.link} href="#">
-                <h3 className={css.subtitle}>О компании</h3>
-              </a>
-            </li>
-            <li>
-              <a className={css.link} href="#">
-                <h3 className={css.subtitle}>Где купить</h3>
-              </a>
-            </li>
-            <li>
-              <a className={css.link} href="#">
-                <h3 className={css.subtitle}>Салоны</h3>
-              </a>
-            </li>
-            <li>
-              <a className={css.link} href="#">
-                <h3 className={css.subtitle}>Новости</h3>
-              </a>
-            </li>
-            <li>
-              <a className={css.link} href="#">
-                <h3 className={css.subtitle}>Вакансии</h3>
-              </a>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <a className={css.link} href="#">
-                <h3 className={css.subtitle}>Дилерам</h3>
-              </a>
-            </li>
-            <li>
-              <a className={css.link} href="#">
-                <h3 className={css.subtitle}>Дизайнерам</h3>
-              </a>
-            </li>
-            <li>
-              <a className={css.link} href="#">
-                <h3 className={css.subtitle}>Кабинет партнера</h3>
-              </a>
-            </li>
-          </ul>
-        </div>
+          <div className={css.navRight}>
+            <ul>
+              <li>
+                <a className={css.link} href="#">
+                  <h3 className={css.subtitle}>Новинки</h3>
+                </a>
+              </li>
+              <li>
+                <a className={css.link} href="#">
+                  <h3 className={css.subtitle}>Кресла</h3>
+                </a>
+              </li>
+              <li>
+                <a className={css.link} href="#">
+                  <h3 className={css.subtitle}>Бескаркасная мебель</h3>
+                </a>
+              </li>
+              <li>
+                <a className={css.link} href="#">
+                  <h3 className={css.subtitle}>Аксессуары</h3>
+                </a>
+              </li>
+            </ul>
 
+            <ul>
+              <li>
+                <a className={css.link} href="#">
+                  <h3 className={css.subtitle}>Дилерам</h3>
+                </a>
+              </li>
+              <li>
+                <a className={css.link} href="#">
+                  <h3 className={css.subtitle}>Дизайнерам</h3>
+                </a>
+              </li>
+              <li>
+                <a className={css.link} href="#">
+                  <h3 className={css.subtitle}>Кабинет партнера</h3>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
         <div className={css.social}>
           <a href="/">
             <Logo className={css.logo} />

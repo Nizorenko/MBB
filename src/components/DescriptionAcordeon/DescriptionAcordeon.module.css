@@ -1,3 +1,9 @@
+.btnBox {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+}
+
 .item {
   position: relative;
 }
@@ -23,7 +29,13 @@
   background-color: transparent;
 }
 
-.btn::before {
+.plus {
+  position: relative;
+
+  width: 100%;
+}
+
+.plus::before {
   position: absolute;
   top: 50%;
   right: 0;
@@ -36,20 +48,20 @@
   background-color: var(--black);
 }
 
-.btn:hover::before {
+.plus:hover::before {
   transition: all 0.2s linear;
   transform: rotate(180deg);
 }
 
-.btn:hover::after {
+.plus:hover::after {
   transition: all 0.2s linear;
-  transform: skew(0deg, 110deg) rotate(180deg);
+  transform: rotate(-90deg);
 }
 
-.btn::after {
+.plus::after {
   position: absolute;
-  top: 28%;
-  right: 6%;
+  top: 9px;
+  right: 7px;
 
   width: 2px;
   height: 16px;
@@ -67,6 +79,15 @@
   color: var(--black);
 }
 
+.text {
+  height: 0;
+
+  opacity: 0;
+  transition: all 0.5s ease 0s;
+}
+
 .isOpen {
-  background-color: rebeccapurple;
+  height: 200px;
+  opacity: 1;
+  transition: all 0.5s ease 0s;
 }

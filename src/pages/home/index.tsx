@@ -4,10 +4,6 @@ import { Advantages } from "@/components/Advantages";
 import { AdviceSwiper, AdviceSlide } from "@/components/AdviceSwiper";
 import { AboutProduction } from "@/components/AboutProduction";
 import { AboutCompany } from "@/components/AboutCompany";
-import {
-  DescriptionAcordeon,
-  AccordionItem,
-} from "@/components/DescriptionAcordeon";
 
 import Slide1 from "@/assets/SliderThelineupPhoto1.jpg";
 import Slide2 from "@/assets/SliderThelineupPhoto2.jpg";
@@ -25,12 +21,6 @@ const mainSwiperItems: Array<MainSlide> = [
   { id: 2, img: Slide3, alt: "Slide3" },
   { id: 3, img: Slide4, alt: "Slide4" },
   { id: 4, img: Slide5, alt: "Slide5" },
-];
-
-const accordeonItems: Array<AccordionItem> = [
-  { id: 0, title: "Описание1", content: <>SASDASDAS1</> },
-  { id: 1, title: "Описание2", content: <>SASDASDAS2</> },
-  { id: 2, title: "Описание3", content: <>SASDASDAS3</> },
 ];
 
 const adviceSwiperItems: Array<AdviceSlide> = [

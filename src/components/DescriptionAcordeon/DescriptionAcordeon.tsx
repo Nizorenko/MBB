@@ -31,12 +31,15 @@ export const DescriptionAcordeon: FC<DescriptionAcordeonProps> = ({
           {items.map(({ id, title, content }) => {
             return (
               <li key={id} className={css.item}>
-                <button
-                  className={css.btn}
-                  onClick={() => toggleAccordionItem(id)}
-                >
-                  <h2 className={css.header}>{title}</h2>
-                </button>
+                <div className={css.btnBox}>
+                  <button
+                    className={css.btn}
+                    onClick={() => toggleAccordionItem(id)}
+                  >
+                    <h2 className={css.header}>{title}</h2>
+                  </button>
+                  <span className={css.plus}></span>
+                </div>
                 <p
                   className={`${css.text} ${
                     openedItems.includes(id) ? css.isOpen : ""
