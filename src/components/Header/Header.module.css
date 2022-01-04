@@ -1,273 +1,68 @@
-/* Секция с навигацией*/
-.section {
-  background-color: #f3fbf6;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  transition: transform 0.4s linear;
+.logo {
+  display: block;
+
+  width: 93px;
+  height: 64px;
 }
 
-@media (max-width: 1050px) {
-  .section {
-    position: fixed;
-    width: 100%;
-    z-index: 1;
-  }
-}
-
-.header {
+.linkBox {
   display: grid;
-  grid-template-columns: 1fr auto auto;
+  grid-template-columns: auto auto;
   gap: 30px;
   align-items: center;
-  white-space: nowrap;
-  justify-items: start;
+  justify-content: space-between;
 }
 
 @media (min-width: 1051px) {
-  .header {
-    grid-template-columns: auto 1fr auto;
-    justify-items: start;
+  .linkBox {
+    grid-template-columns: auto 1fr;
+    column-gap: 50px;
   }
 }
 
-.logo {
-  z-index: 3;
-  position: relative;
-}
-
-.link {
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-
-  color: #333333;
-  text-decoration: none;
-
-  position: relative;
-
-  transition: 0.2s linear;
-}
-
-@media (max-width: 1050px) {
-  .link {
-    font-size: 20px;
-  }
-}
-
-.link:hover {
-  color: #13ab4e;
-}
-
-.link::after {
-  content: "";
-  opacity: 0;
-  transition: opacity 0.3s linear;
-  background-color: #13ab4e;
-  width: 100%;
-  height: 1px;
-
-  margin-top: 3px;
-
-  position: absolute;
-  top: 100%;
-  left: 0;
-}
-
-.link:hover:after {
-  opacity: 1;
-}
-
-.user {
-  display: none;
-  grid-template-columns: auto auto;
-  gap: 32px;
-}
-
-@media (min-width: 1051px) {
-  .user {
-    display: grid;
-  }
-}
-
-.entrance {
+.itemsBox {
   display: grid;
   grid-template-columns: auto auto;
-  gap: 6px;
+  column-gap: 30px;
   align-items: center;
-  border: none;
-  background-color: transparent;
-  padding: 5px 12px;
-  cursor: pointer;
-  transition: 0.2s;
-  color: #333333;
 }
 
-.entrance:hover {
-  border-radius: 4px;
-  box-shadow: inset 0 0 0 1px #13ab4e;
+@media (min-width: 1051px) {
+  .itemsBox {
+    grid-template-columns: auto;
+  }
 }
 
-.iconMobil {
+.linkSearch {
+  display: inline;
+
+  background: transparent;
+  border: 0;
+}
+
+.linkLogo,
+.linkSearch {
+  z-index: 4;
+}
+
+.search {
   display: block;
+
+  width: 18px;
+  height: 18px;
+
   cursor: pointer;
-  z-index: 1;
-  color: #13ab4e;
-  width: 30px;
-  height: 30px;
-  position: relative;
-  transition: all 0.4s linear;
 
-  width: 30 px;
-  height: 30 px;
-  padding: 0;
-
-  border: none;
-  background: none;
-  padding: 0;
+  color: var(--gray);
+  transition: color 0.5s ease 0s;
 }
 
 @media (min-width: 1051px) {
-  .iconMobil {
+  .search {
     display: none;
   }
 }
 
-.iconMobil:after {
-  content: "";
-  opacity: 0;
-  transition: opacity 0.4s linear;
-  background-color: rgba(0, 197, 76, 0.8);
-  width: 100%;
-  height: 2px;
-
-  position: absolute;
-  top: 100%;
-  left: 0;
-}
-.iconMobil:hover::after {
-  opacity: 1;
-}
-.iconMobil:hover {
-  transition: color 0.4s linear;
-  color: rgba(0, 197, 76, 0.8);
-}
-
-@media (min-width: 1051px) {
-  .list {
-    display: grid;
-    gap: 40px;
-    grid-template-columns: auto auto auto auto;
-  }
-
-  .burgerMenu {
-    display: none;
-  }
-
-  .btnIsLock {
-    display: none;
-  }
-}
-
-@media (max-width: 1050px) {
-  .list {
-    margin-bottom: 20px;
-  }
-
-  .list li {
-    text-align: right;
-    padding: 15px 0;
-  }
-
-  /* Прячет header в мобильной версии */
-
-  .hideNav {
-    transform: translateY(-70px);
-  }
-
-  .burgerMenu {
-    display: block;
-    font-size: 0;
-    position: relative;
-    width: 30px;
-
-    height: 24px;
-    cursor: pointer;
-    border: none;
-    background: none;
-
-    padding: 0;
-  }
-
-  .burgerMenu span,
-  .burgerMenu::before,
-  .burgerMenu::after {
-    position: absolute;
-    height: 10%;
-    width: 100%;
-    transition: all 0.5s ease 0s;
-    background-color: #13ab4e;
-    left: 0;
-  }
-
-  .burgerMenu::after,
-  .burgerMenu::before {
-    content: "";
-  }
-
-  .burgerMenu::before {
-    top: 0;
-  }
-
-  .burgerMenu::after {
-    bottom: 0;
-  }
-
-  .burgerMenu span {
-    top: 50%;
-    transform: scale(1) translate(0px, -50%);
-  }
-
-  /* Открывает nav */
-
-  .burgerMenu.isOpenNav span {
-    transform: scale(0) translate(0px, -50%);
-  }
-  .burgerMenu.isOpenNav::before {
-    top: 50%;
-    transform: rotate(-45deg) translate(0px, -50%);
-  }
-
-  .burgerMenu.isOpenNav::after {
-    top: 50%;
-    transform: rotate(45deg) translate(0px, 50%);
-  }
-
-  .nav {
-    position: fixed;
-    top: -100%;
-    right: 0;
-
-    max-height: 100%;
-
-    border-radius: 0 0 0 40px;
-    background-color: rgb(243, 251, 246);
-    padding: 100px 30px 30px 30px;
-    transition: top 1s cubic-bezier(0.95, 0.05, 0.05, 0.9);
-    overflow: auto;
-  }
-
-  .nav ::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 70px;
-    background-color: #f3fbf6;
-    z-index: 4;
-  }
-
-  .isOpenNav {
-    top: 0;
-  }
+.search:hover {
+  color: var(--orange);
 }

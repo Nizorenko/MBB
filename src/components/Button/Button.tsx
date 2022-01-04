@@ -11,9 +11,7 @@ export const Button: FC<IButton> = ({
 }) => {
   const buttonClassName = `${
     variant === "color" || variant === "default" ? css.btn : ""
-  } ${variant === "color" ? css.color : ""} ${
-    variant === "details" ? css.details : ""
-  } ${variant === "phone" ? css.overviewBtnCall : ""} ${className}`;
+  } ${variant === "color" ? css.color : ""} ${className}`;
 
   return (
     <button className={buttonClassName} onClick={onClick}>

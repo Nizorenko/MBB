@@ -1,0 +1,177 @@
+/* Модальное окно*/
+
+.popup {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  z-index: -1;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 30px 15px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease 0s;
+  background-color: rgba(45, 45, 45, 0.9);
+}
+
+.popup.isOpenPopup .content {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.body {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100%;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: auto;
+
+  width: 100%;
+  max-width: 450px;
+  max-height: 100%;
+
+  padding: 25px 40px;
+
+  text-align: center;
+  transition: 0.5s ease 0s;
+  transform: translate(0px, -100%);
+  opacity: 0;
+  visibility: 0;
+
+  font-family: var(--bold);
+  color: var(--lightGrey);
+  background-color: var(--black);
+}
+
+.form {
+  display: grid;
+  grid-template-columns: auto;
+  row-gap: 16px;
+
+  margin-bottom: 30px;
+  margin-top: 15px;
+}
+
+.boxIput {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 14px;
+  align-items: center;
+  justify-items: end;
+
+  width: 100%;
+
+  padding-left: 15px;
+}
+
+.input {
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+  max-width: 450px;
+  height: 54px;
+
+  padding-left: 24px;
+
+  color: var(--lightGrey);
+  font-family: var(--medium);
+  font-size: var(--big);
+
+  border: none;
+  background-color: var(--black);
+}
+
+.input::-webkit-inner-spin-button {
+  display: none;
+}
+
+.boxIput::before {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  width: 100%;
+  height: 2px;
+
+  content: "";
+
+  background-color: var(--strokeBlack);
+}
+
+.input:focus {
+  outline: 0;
+}
+
+.button {
+  margin-bottom: 15px;
+
+  padding: 12px 28px;
+
+  font-size: var(--big);
+}
+
+.title {
+  margin: auto 10px;
+
+  font-size: var(--big);
+  line-height: 28px;
+}
+
+.contacts {
+  display: grid;
+  grid-template-rows: auto;
+  row-gap: 12px;
+
+  padding: 0 20px;
+
+  font-style: normal;
+}
+.titleAddress,
+.titlePhone,
+.titleEmail {
+  font-size: var(--slightlyMore);
+  font-family: var(--medium);
+}
+
+.linkAddress,
+.linkPhone,
+.linkEmail {
+  font-size: var(--slightlyMore);
+  font-family: var(--regular);
+
+  text-decoration: none;
+  color: var(--greyTextSecond);
+}
+
+.linkAddress:hover,
+.linkPhone:hover,
+.linkEmail:hover {
+  text-decoration: underline;
+}
+
+.isLockSkroll {
+  overflow: hidden;
+}
+
+.isOpenPopup {
+  z-index: 10;
+
+  opacity: 1;
+  visibility: visible;
+}

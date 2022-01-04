@@ -1,26 +1,18 @@
-import { Header } from "@/components/Header";
+import { BrowserRouter } from "react-router-dom";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/zoom";
 
-import { Presentation } from "@/components/Presentation";
-import { Company } from "./components/Company";
-import { Preview } from "./components/Preview";
-import { Benefits } from "./components/Benefits";
-import { Proposal } from "./components/Proposal";
-import { Comment } from "./components/Comment";
-import { Feedback } from "./components/Feedback";
-import { Footer } from "./components/Footer";
+import { DefaultLayout } from "@/layouts/DefaultLayout";
+
+import { Router } from "./Router";
 
 export default function App() {
   return (
-    <>
-      <Header />
-      <Company />
-      <Presentation />
-      <Preview />
-      <Benefits />
-      <Proposal />
-      <Comment />
-      <Feedback />
-      <Footer />
-    </>
+    <BrowserRouter>
+      <DefaultLayout>
+        <Router />
+      </DefaultLayout>
+    </BrowserRouter>
   );
 }

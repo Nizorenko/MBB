@@ -1,146 +1,164 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 
-import { Container } from "@/components/Container";
+import { FooterProps } from "./types";
+import { Container } from "../Container";
 
-import Logo from "@/assets/NimblyLogoFooter.png";
-import Qr from "@/assets/QRCode.png";
+import { ReactComponent as Logo } from "@/assets/Logo.svg";
+import { ReactComponent as Instagram } from "@/assets/Instagram.svg";
+import { ReactComponent as Vk } from "@/assets/Vk.svg";
+import { ReactComponent as Facebook } from "@/assets/Facebook.svg";
+import { ReactComponent as Telegram } from "@/assets/Telegram.svg";
 
 import css from "./Footer.module.css";
 
-export const Footer: FC = () => {
+export const Footer: FC<FooterProps> = ({ className, openPopup }) => {
   return (
-    <footer>
-      <div className={css.section}>
-        <Container>
-          <div className={css.footer}>
-            <div className={css.about}>
-              <a className={css.logoLink} href="#">
-                <img className={css.logo} src={Logo} alt="nimbly-logo-footer" />
+    <footer className={className}>
+      <Container>
+        <div className={css.nav}>
+          <div className={css.headerBox}>
+            <h2 className={css.header}>Каталог товаров</h2>
+          </div>
+          <ul>
+            <li>
+              <a className={css.link} href="#">
+                <h3 className={css.subtitle}>Модульные диваны</h3>
               </a>
-              <p className={css.aboutText}>
-                Digitize your business operations and gain real-time analytics
-                on your team progress anytime, anywhere.
-              </p>
-
-              <img className={css.qr} src={Qr} alt="QR-Code" />
-            </div>
-            <div className={css.box}>
-              <section className={css.boxNav}>
-                <h3 className={css.title}>Nimbly</h3>
-
-                <ul className={css.list}>
-                  <li className={css.item}>
-                    <a className={css.link} href="#">
-                      About Us
-                    </a>
-                  </li>
-                  <li className={css.item}>
-                    <a className={css.link} href="#">
-                      Features
-                    </a>
-                  </li>
-                  <li className={css.item}>
-                    <a className={css.link} href="#">
-                      Industries
-                    </a>
-                  </li>
-                  <li className={css.item}>
-                    <a className={css.link} href="#">
-                      How it Works
-                    </a>
-                  </li>
-                  <li className={css.item}>
-                    <a className={css.link} href="#">
-                      Insight
-                    </a>
-                  </li>
-                </ul>
-              </section>
-
-              <section className={css.boxNav}>
-                <h3 className={css.title}>More</h3>
-
-                <ul className={css.list}>
-                  <li className={css.item}>
-                    <a className={css.link} href="#">
-                      Blogs
-                    </a>
-                  </li>
-                  <li className={css.item}>
-                    <a className={css.link} href="#">
-                      Contact Us
-                    </a>
-                  </li>
-                  <li className={css.item}>
-                    <a className={css.link} href="#">
-                      FAQ
-                    </a>
-                  </li>
-                  <li className={css.item}>
-                    <a className={css.link} href="#">
-                      Privacy Policy
-                    </a>
-                  </li>
-                  <li className={css.item}>
-                    <a className={css.link} href="#">
-                      Terms & Condition
-                    </a>
-                  </li>
-                </ul>
-              </section>
-
-              <div className={css.info}>
-                <ul className={css.infoList}>
-                  <li className={css.infoItem}>
-                    <h3 className={css.infoTitle}>Indonesian Office</h3>
-                    <p className={css.infoText}>
-                      WeWork, Noble House Jl. Dr. Ide Anak Agung Gde Agung DKI
-                      Jakarta 12950
-                    </p>
-                  </li>
-
-                  <li className={css.infoItem}>
-                    <h3 className={css.infoTitle}>US Office</h3>
-                    <p className={css.infoText}>
-                      2001 Ross Avenue Suite #700-119 Dallas, TX 75291
-                    </p>
-                  </li>
-                </ul>
-              </div>
-              <div className={css.info}>
-                <ul className={css.infoList}>
-                  <li className={css.infoItem}>
-                    <h3 className={css.infoTitle}>Singapore Office</h3>
-                    <p className={css.infoText}>
-                      100 Peck Seah Street PS100 #08-14 Singapore 079333
-                    </p>
-                  </li>
-
-                  <li className={css.infoItem}>
-                    <h3 className={css.infoTitle}>Colombia Office</h3>
-                    <p className={css.infoText}>
-                      Calle 52 B # 74 A 32 Bogotá - Colombia
-                    </p>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            </li>
+            <li>
+              <a className={css.link} href="#">
+                <h3 className={css.subtitle}>Диваны</h3>
+              </a>
+            </li>
+            <li>
+              <a className={css.link} href="#">
+                <h3 className={css.subtitle}>Классическая мебель</h3>
+              </a>
+            </li>
+            <li>
+              <a className={css.link} href="#">
+                <h3 className={css.subtitle}>Малогабритные диваны</h3>
+              </a>
+            </li>
+            <li>
+              <a className={css.link} href="#">
+                <h3 className={css.subtitle}>Кровати</h3>
+              </a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a className={css.link} href="#">
+                <h3 className={css.subtitle}>Новинки</h3>
+              </a>
+            </li>
+            <li>
+              <a className={css.link} href="#">
+                <h3 className={css.subtitle}>Кресла</h3>
+              </a>
+            </li>
+            <li>
+              <a className={css.link} href="#">
+                <h3 className={css.subtitle}>Бескаркасная мебель</h3>
+              </a>
+            </li>
+            <li>
+              <a className={css.link} href="#">
+                <h3 className={css.subtitle}>Аксессуары</h3>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div className={css.nav}>
+          <div className={css.headerBox}>
+            <h2 className={css.header}>Информация</h2>
           </div>
-        </Container>
-      </div>
-      <div className={css.copyright}>
-        <Container>
-          <div className={css.copyrightBox}>
-            <p className={css.text}>
-              Copyright © 2021 Nimbly App. All rights reserved.
-            </p>
-            <p className={css.textOrder}>
-              We are ISO 27001 certified, assuring information security is
-              managed with the highest standards.
-            </p>
+          <ul>
+            <li>
+              <a className={css.link} href="#">
+                <h3 className={css.subtitle}>О компании</h3>
+              </a>
+            </li>
+            <li>
+              <a className={css.link} href="#">
+                <h3 className={css.subtitle}>Где купить</h3>
+              </a>
+            </li>
+            <li>
+              <a className={css.link} href="#">
+                <h3 className={css.subtitle}>Салоны</h3>
+              </a>
+            </li>
+            <li>
+              <a className={css.link} href="#">
+                <h3 className={css.subtitle}>Новости</h3>
+              </a>
+            </li>
+            <li>
+              <a className={css.link} href="#">
+                <h3 className={css.subtitle}>Вакансии</h3>
+              </a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a className={css.link} href="#">
+                <h3 className={css.subtitle}>Дилерам</h3>
+              </a>
+            </li>
+            <li>
+              <a className={css.link} href="#">
+                <h3 className={css.subtitle}>Дизайнерам</h3>
+              </a>
+            </li>
+            <li>
+              <a className={css.link} href="#">
+                <h3 className={css.subtitle}>Кабинет партнера</h3>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div className={css.social}>
+          <a href="/">
+            <Logo className={css.logo} />
+          </a>
+
+          <div className={css.boxContacts}>
+            <a className={css.linkPhone} href="tel:8 800 250 43 06">
+              8 800 250-43-06
+            </a>
+            <a className={css.linkEmail} href="mailto:info@kirovmebel.ru">
+              info@kirovmebel.ru
+            </a>
           </div>
-        </Container>
-      </div>
+          <ul className={css.list}>
+            <li>
+              <a href="#">
+                <Instagram className={css.instagram} />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <Vk className={css.vk} />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <Facebook className={css.facebook} />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <Telegram className={css.telegram} />
+              </a>
+            </li>
+          </ul>
+          <button onClick={openPopup} className={css.feedback}>
+            Обратная связь
+          </button>
+        </div>
+      </Container>
     </footer>
   );
 };

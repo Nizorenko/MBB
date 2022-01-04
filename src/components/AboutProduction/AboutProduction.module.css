@@ -1,0 +1,59 @@
+.colorHeader {
+  background-color: var(--white);
+}
+
+.header {
+  padding-bottom: 22px;
+
+  text-align: center;
+
+  font-size: var(--large);
+  line-height: 32px;
+  font-family: var(--bold);
+}
+
+.list {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 30px;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+
+  padding: 25px 0;
+}
+
+@media (min-width: 650px) {
+  .list {
+    grid-template-columns: auto auto auto auto;
+  }
+}
+
+.link {
+  display: grid;
+  grid-template-columns: auto;
+  row-gap: 10px;
+
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.subtitle {
+  margin-top: 10px;
+
+  font-size: var(--average);
+  line-height: 17px;
+  font-family: var(--bold);
+
+  color: var(--black);
+}
+
+.present,
+.condition,
+.delivery,
+.guarante {
+  width: 100px;
+  height: 100px;
+
+  color: var(--orange);
+}

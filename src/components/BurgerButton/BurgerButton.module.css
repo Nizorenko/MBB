@@ -1,0 +1,62 @@
+.burgerButton {
+  position: relative;
+  z-index: 4;
+
+  display: block;
+
+  width: 48px;
+  height: 15px;
+
+  padding: 0;
+
+  cursor: pointer;
+  border: none;
+  background: none;
+
+  font-size: 0;
+}
+
+@media (min-width: 1051px) {
+  .burgerButton {
+    display: none;
+  }
+}
+
+.burgerButton::before,
+.burgerButton::after {
+  position: absolute;
+  left: 0;
+
+  height: 3px;
+  width: 100%;
+
+  content: "";
+  background-color: var(--gray);
+  border-radius: 20px;
+  transition: all 0.5s ease 0s;
+}
+
+.burgerButton::before {
+  top: 0;
+}
+
+.burgerButton::after {
+  bottom: 0;
+}
+
+.burgerButton:hover::after,
+.burgerButton:hover::before {
+  background-color: var(--orange);
+}
+
+.burgerButton.isOpenNav::before {
+  top: 50%;
+
+  transform: rotate(-45deg) translate(0px, -50%);
+}
+
+.burgerButton.isOpenNav::after {
+  top: 50%;
+
+  transform: rotate(45deg) translate(0px, 50%);
+}

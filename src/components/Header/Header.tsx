@@ -1,69 +1,49 @@
-import type { FC } from "react";
+import { FC, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
-import { Button } from "@/components/Button";
-import { Container } from "@/components/Container";
+import { Container } from "../Container";
+import { Menu, NavItem } from "../Menu";
+import { BurgerButton } from "../BurgerButton";
 
-import { ReactComponent as Frame } from "@/assets/Frame.svg";
-import Logo from "@/assets/NimblyLogoHeader.png";
+import { ReactComponent as Search } from "@/assets/Search.svg";
+import { ReactComponent as Logo } from "@/assets/Logo.svg";
 
 import css from "./Header.module.css";
+import { HederProps } from "./types";
 
-const navList: Array<string> = [
-  "Features",
-  "How it works",
-  "Industries",
-  "Insight",
+const navList: Array<NavItem> = [
+  { title: "Каталог", url: "/category-1" },
+  { title: "Новости", url: "/category-2" },
+  { title: "Салоны", url: "/category-1/qwe" },
+  { title: "О компании", url: "/category" },
+  { title: "Франшиза", url: "/category" },
+  { title: "Контакты", url: "/category" },
+  { title: "Партнёрам", url: "/category" },
 ];
 
-export const Header: FC = () => {
+export const Header: FC<HederProps> = ({ openPopup, className }) => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
   const handler = (): void => {
-    alert("я не тупой");
+    setIsOpen(!isOpen);
   };
 
   return (
-    <header className={css.section}>
+    <header className={className}>
       <Container>
-        <div className={css.header}>
-          <a className={css.logo} href="#">
-            <img alt="Company logo" src={Logo} />
-          </a>
+        <div className={css.linkBox}>
+          <Link className={css.linkLogo} to="/">
+            <Logo className={css.logo} />
+          </Link>
+          <div className={css.itemsBox}>
+            <Menu openPopup={openPopup} isOpen={isOpen} navList={navList} />
 
-          <button className={css.iconMobil} type="button">
-            <Frame width="30" height="30" />
-          </button>
-          <nav className={css.nav}>
-            <ul className={css.list}>
-              {navList.map((value, index) => {
-                return (
-                  <li key={index}>
-                    <a className={css.link} href="#">
-                      {value}
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
-
-            <Button className={css.btnIsLock} variant="color">
-              Request Demo
-            </Button>
-          </nav>
-
-          <div className={css.user}>
-            <button className={css.entrance} type="button">
-              <Frame width="24" height="24" />
-              Sign In
+            <button className={css.linkSearch}>
+              <Search className={css.search} />
             </button>
 
-            <Button variant="color" onClick={handler}>
-              Request Demo
-            </Button>
+            <BurgerButton isOpen={isOpen} onClick={handler} />
           </div>
-
-          <button className={css.burgerMenu} type="button">
-            burger menu
-            <span />
-          </button>
         </div>
       </Container>
     </header>

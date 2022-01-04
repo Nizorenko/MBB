@@ -1,7 +1,61 @@
+:root {
+  /* colors */
+  --black: #2d2d2d;
+  --orange: #e15200;
+  --lightBlack: #404040;
+  --gray: #e4e4e4;
+  --lightGrey: #f9f8f9;
+  --white: #fff;
+  --yellow: #f9d466;
+  --strokeBlack: #4e4e4e;
+  --greyTextSecond: #9f9f9f;
+  --strokeGreyLight: #eaeaea;
+
+  /* font sizes and line height */
+
+  --lessSmall: 9px;
+  --smallest: 12px;
+  --small: 14px;
+  --average: 16px;
+  --slightlyMore: 18px;
+  --big: 20px;
+  --large: 24px;
+  --biggest: 32px;
+  --huge: 44px;
+
+  /* fonts */
+  --bold: "San Francisco Pro Display Bold";
+  --semibold: "San Francisco Pro Display Semibold";
+  --regular: "San Francisco Pro Display Regular";
+  --medium: "San Francisco Pro Display Medium";
+}
+
+@font-face {
+  font-family: "San Francisco Pro Display Bold";
+  src: local("San Francisco Pro Display Bold"),
+    url(./assets/fonts/SFProDisplay-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "San Francisco Pro Display Semibold";
+  src: local("San Francisco Pro Display Semibold"),
+    url(./assets/fonts/SFProDisplay-Semibold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "San Francisco Pro Display Medium";
+  src: local("San Francisco Pro Display Medium"),
+    url(./assets/fonts/SFProDisplay-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "San Francisco Pro Display Regular";
+  src: local("San Francisco Pro Display Regular"),
+    url(./assets/fonts/SFProDisplay-Regular.ttf) format("truetype");
+}
+
 html {
-  font-family: "Poppins", sans-serif;
   box-sizing: border-box;
-  color: #333333;
 }
 
 *,
@@ -10,48 +64,12 @@ html {
   box-sizing: inherit;
 }
 
-body {
-  margin: 0;
-}
-
-h1 {
-  font-size: 29px;
-  line-height: 47px;
-  font-weight: 600;
-  margin: 0;
-  margin-bottom: 15px;
-}
-
-h2 {
-  font-size: 29px;
-  line-height: 47px;
-  font-weight: 600;
-  margin: 0;
-  margin-bottom: 15px;
-}
-
-@media (min-width: 1051px) {
-  h2 {
-    font-size: 48px;
-    line-height: 72px;
-  }
-}
-
-h3 {
-  margin: 0;
-}
-
+body,
+h1,
+h2,
+h3,
 p {
-  font-size: 16px;
-  line-height: 28px;
-  font-weight: 400;
-}
-
-@media (min-width: 650px) {
-  p {
-    font-size: 18px;
-    line-height: 32px;
-  }
+  margin: 0;
 }
 
 ul {
