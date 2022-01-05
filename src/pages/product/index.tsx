@@ -5,6 +5,10 @@ import {
   AccordionItem,
 } from "@/components/DescriptionAcordeon";
 
+import Material1 from "@/assets/Material1.png";
+
+import css from "./Profuct.module.css";
+
 const accordeonItems: Array<AccordionItem> = [
   {
     id: 0,
@@ -27,34 +31,34 @@ const accordeonItems: Array<AccordionItem> = [
     title: "Материал обивки",
     content: (
       <>
-        <ul>
-          <li>
-            <span></span>
-            <img src="" alt="" />
+        <ul className={css.list}>
+          <li className={css.item}>
+            <span>Велюр</span>
+            <img src={Material1} alt="" />
           </li>
           <li>
-            <span></span>
-            <img src="" alt="" />
+            <span>Замша</span>
+            <img src={Material1} alt="" />
           </li>
           <li>
-            <span></span>
-            <img src="" alt="" />
+            <span>Велюр</span>
+            <img src={Material1} alt="" />
           </li>
           <li>
-            <span></span>
-            <img src="" alt="" />
+            <span>Замша</span>
+            <img src={Material1} alt="" />
           </li>
           <li>
-            <span></span>
-            <img src="" alt="" />
+            <span>Велюр</span>
+            <img src={Material1} alt="" />
           </li>
           <li>
-            <span></span>
-            <img src="" alt="" />
+            <span>Замша</span>
+            <img src={Material1} alt="" />
           </li>
           <li>
-            <span></span>
-            <img src="" alt="" />
+            <span>Велюр</span>
+            <img src={Material1} alt="" />
           </li>
         </ul>
       </>
@@ -79,7 +83,10 @@ export default function Product() {
   console.log(params);
   return (
     <>
-      <DescriptionAcordeon items={accordeonItems} />
+      <DescriptionAcordeon
+        items={accordeonItems}
+        className={css.descriptionAcordeon}
+      />
     </>
   );
 }

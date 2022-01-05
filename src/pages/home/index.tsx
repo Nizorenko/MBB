@@ -4,6 +4,7 @@ import { Advantages } from "@/components/Advantages";
 import { AdviceSwiper, AdviceSlide } from "@/components/AdviceSwiper";
 import { AboutProduction } from "@/components/AboutProduction";
 import { AboutCompany } from "@/components/AboutCompany";
+import { SwiperPreview } from "@/components/SwiperPreview";
 
 import Slide1 from "@/assets/SliderThelineupPhoto1.jpg";
 import Slide2 from "@/assets/SliderThelineupPhoto2.jpg";
@@ -63,6 +64,7 @@ export default function Home() {
       <AdviceSwiper items={adviceSwiperItems} className={css.adviceSwiper} />
       <AboutProduction className={css.AboutProduction} />
       <AboutCompany className={css.AboutCompany} />
+      <SwiperPreview items={adviceSwiperItems} />
     </main>
   );
 }

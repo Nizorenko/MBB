@@ -7,6 +7,8 @@ import { ReactComponent as Name } from "@/assets/Name.svg";
 import { ReactComponent as Phone } from "@/assets/Phone.svg";
 import { ReactComponent as Mail } from "@/assets/Mail.svg";
 
+import { ReactComponent as ArrowBack } from "@/assets/ArrowBack.svg";
+
 import css from "./PopupFeedback.module.css";
 
 export const PopupFeedback: FC<PopupFeedbackProps> = ({ isOpen, onClose }) => {
@@ -23,8 +25,13 @@ export const PopupFeedback: FC<PopupFeedbackProps> = ({ isOpen, onClose }) => {
     <div className={popupClassName} onClick={handler}>
       <div className={css.body}>
         <div className={css.content} onClick={e => e.stopPropagation()}>
-          <h3 className={css.title}>Оставьте свои контакты!</h3>
-          <p className={css.text}>Мы обязательно свяжемся с вами!</p>
+          <div className={css.boxFeedbeak}>
+            <button className={css.btnArrowBack}>
+              <ArrowBack onClick={handler} className={css.arrowBack} />
+            </button>
+
+            <h2 className={css.feedbeak}>Обратная связь</h2>
+          </div>
 
           <form className={css.form} action="#" method="#">
             <div className={css.boxIput}>

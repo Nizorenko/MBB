@@ -11,7 +11,6 @@ export const DescriptionAcordeon: FC<DescriptionAcordeonProps> = ({
   items,
 }) => {
   const [openedItems, setOpenedItems] = useState<Array<number>>([]);
-
   const toggleAccordionItem = (itemId: number): void => {
     let newOpenedItems = [...openedItems];
     if (newOpenedItems.includes(itemId)) {
@@ -38,7 +37,11 @@ export const DescriptionAcordeon: FC<DescriptionAcordeonProps> = ({
                   >
                     <h2 className={css.header}>{title}</h2>
                   </button>
-                  <span className={css.plus}></span>
+                  <span
+                    className={`${css.plus} ${
+                      openedItems.includes(id) ? css.plusIsOpen : ""
+                    }`}
+                  ></span>
                 </div>
                 <p
                   className={`${css.text} ${
