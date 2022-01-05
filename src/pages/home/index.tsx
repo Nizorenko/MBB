@@ -4,7 +4,7 @@ import { Advantages } from "@/components/Advantages";
 import { AdviceSwiper, AdviceSlide } from "@/components/AdviceSwiper";
 import { AboutProduction } from "@/components/AboutProduction";
 import { AboutCompany } from "@/components/AboutCompany";
-import { SwiperPreview } from "@/components/SwiperPreview";
+import { SwiperPreview, SwiperPreviewSlide } from "@/components/SwiperPreview";
 
 import Slide1 from "@/assets/SliderThelineupPhoto1.jpg";
 import Slide2 from "@/assets/SliderThelineupPhoto2.jpg";
@@ -33,24 +33,67 @@ const adviceSwiperItems: Array<AdviceSlide> = [
     alt: "Photo1",
   },
   {
-    id: 0,
+    id: 1,
     img: AdviceSlide2,
     title: "Как уберечь диван от кошки?",
     text: "Любовь к красивой мебели и любовь к домашним питомцам – понятия вполне совместимые.",
     alt: "Photo1",
   },
   {
-    id: 0,
+    id: 2,
     img: AdviceSlide1,
     title: "Как правильно ухаживать за мебелью",
     text: "Любая мебель, если неправильно за ней ухаживать, может очень быстро прийти в негодность.",
     alt: "Photo1",
   },
   {
-    id: 0,
+    id: 3,
     img: AdviceSlide2,
     title: "Как уберечь диван от кошки?",
     text: "Любовь к красивой мебели и любовь к домашним питомцам – понятия вполне совместимые.",
+    alt: "Photo1",
+  },
+];
+
+const swiperPreviewItems: Array<SwiperPreviewSlide> = [
+  {
+    id: 0,
+    img: Slide1,
+    alt: "Photo1",
+  },
+  {
+    id: 1,
+    img: Slide2,
+    alt: "Photo1",
+  },
+  {
+    id: 2,
+    img: Slide1,
+    alt: "Photo1",
+  },
+  {
+    id: 3,
+    img: Slide2,
+    alt: "Photo1",
+  },
+  {
+    id: 4,
+    img: Slide1,
+    alt: "Photo1",
+  },
+  {
+    id: 5,
+    img: Slide2,
+    alt: "Photo1",
+  },
+  {
+    id: 6,
+    img: Slide1,
+    alt: "Photo1",
+  },
+  {
+    id: 7,
+    img: Slide2,
     alt: "Photo1",
   },
 ];
@@ -60,11 +103,11 @@ export default function Home() {
     <main className={css.main}>
       <MainSwiper items={mainSwiperItems} />
       <Category className={css.category} />
+      <SwiperPreview items={swiperPreviewItems} />
       <Advantages className={css.advantages} />
       <AdviceSwiper items={adviceSwiperItems} className={css.adviceSwiper} />
       <AboutProduction className={css.AboutProduction} />
       <AboutCompany className={css.AboutCompany} />
-      <SwiperPreview items={adviceSwiperItems} />
     </main>
   );
 }

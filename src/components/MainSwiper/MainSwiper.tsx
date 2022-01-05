@@ -33,7 +33,6 @@ export const MainSwiper: FC<MainSwiperProps> = ({ items }) => {
         slidesPerView={1}
         navigation={{ prevEl: `.${css.prev}`, nextEl: `.${css.next}` }}
         pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
         onSwiper={updateActiveIndex}
         onSlideChange={updateActiveIndex}
       >

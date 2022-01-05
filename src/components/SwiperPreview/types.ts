@@ -1,13 +1,11 @@
 import { IWithClassName } from "@/types";
 
 export interface SwiperPreviewProps extends IWithClassName {
-  items: Array<AdviceSlide>;
+  items: Array<SwiperPreviewSlide>;
 }
 
-export type AdviceSlide = {
+export type SwiperPreviewSlide = {
   id: number;
   img: string;
-  title: string;
-  text: string;
   alt?: string;
 };

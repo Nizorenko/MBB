@@ -32,7 +32,6 @@ export const AdviceSwiper: FC<AdviceSwiperProps> = ({ className, items }) => {
           spaceBetween={50}
           navigation={{ prevEl: `.${css.prev}`, nextEl: `.${css.next}` }}
           pagination={{ clickable: true }}
-          scrollbar={{ draggable: true }}
           breakpoints={{
             0: {
               slidesPerView: 1,
