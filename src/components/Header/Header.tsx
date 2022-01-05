@@ -36,7 +36,12 @@ export const Header: FC<HederProps> = ({ openPopup, className }) => {
             <Logo className={css.logo} />
           </Link>
           <div className={css.itemsBox}>
-            <Menu openPopup={openPopup} isOpen={isOpen} navList={navList} />
+            <Menu
+              openPopup={openPopup}
+              onClick={handler}
+              isOpen={isOpen}
+              navList={navList}
+            />
 
             <button className={css.linkSearch}>
               <Search className={css.search} />

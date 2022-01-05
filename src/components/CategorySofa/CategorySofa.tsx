@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { Link } from "react-router-dom";
 
 import { CategorySofaProps } from "./types";
 import { Container } from "../Container";
@@ -31,9 +32,9 @@ export const CategorySofa: FC<CategorySofaProps> = ({ className }) => {
                   <Material2 className={css.material} />
                 </div>
               </div>
-              <a className={css.link} href="/category-1/Marsel">
+              <Link className={css.link} to="/category-1/Marsel">
                 <img className={css.photo} src={Photo1} alt="Photo slide1" />
-              </a>
+              </Link>
               <h2 className={css.headerBottom}>Marsel</h2>
             </li>
             <li className={css.item}>

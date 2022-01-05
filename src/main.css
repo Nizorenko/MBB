@@ -23,11 +23,18 @@
   --biggest: 32px;
   --huge: 44px;
 
+  --swiper-theme-color: #404040;
+
   /* fonts */
   --bold: "San Francisco Pro Display Bold";
   --semibold: "San Francisco Pro Display Semibold";
   --regular: "San Francisco Pro Display Regular";
   --medium: "San Francisco Pro Display Medium";
+
+  /* breakpoints */
+
+  --desktop: 1051px;
+  --tablet: 650px;
 }
 
 @font-face {

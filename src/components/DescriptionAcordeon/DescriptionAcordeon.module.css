@@ -81,13 +81,5 @@
 
 .text {
   height: 0;
-
-  opacity: 0;
-  transition: all 0.5s ease 0s;
-}
-
-.isOpen {
-  height: 200px;
-  opacity: 1;
-  transition: all 0.5s ease 0s;
+  overflow: hidden;
 }

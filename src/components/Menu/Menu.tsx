@@ -9,7 +9,12 @@ import { ReactComponent as Search } from "@/assets/Search.svg";
 import css from "./Menu.module.css";
 import { Link } from "react-router-dom";
 
-export const Menu: FC<MenuProps> = ({ isOpen, navList, openPopup }) => {
+export const Menu: FC<MenuProps> = ({
+  isOpen,
+  navList,
+  openPopup,
+  onClick,
+}) => {
   const burgerMenuClassName = `${css.nav} ${isOpen ? css.isOpenNav : ""}`;
 
   return (
@@ -30,7 +35,7 @@ export const Menu: FC<MenuProps> = ({ isOpen, navList, openPopup }) => {
         {navList.map(({ title, url }) => {
           return (
             <Link key={title} className={css.link} to={url}>
-              <li className={css.item}>
+              <li className={css.item} onClick={onClick}>
                 {title}
 
                 <Arrow className={css.arrow} width="7" height="10" />

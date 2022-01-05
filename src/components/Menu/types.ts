@@ -6,6 +6,7 @@ export type NavItem = {
 };
 
 export interface MenuProps extends IWithClassName {
+  onClick: () => void;
   openPopup: () => void;
   isOpen: boolean;
   navList: Array<NavItem>;

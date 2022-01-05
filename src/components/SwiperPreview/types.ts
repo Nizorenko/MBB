@@ -8,4 +8,5 @@ export type SwiperPreviewSlide = {
   id: number;
   img: string;
   alt?: string;
+  bigImg?: string;
 };

@@ -1,5 +1,7 @@
 import { FC, useState } from "react";
 
+import anime from "animejs";
+
 import { Container } from "../Container";
 
 import { DescriptionAcordeonProps, AccordionItem } from "./types";
@@ -11,14 +13,32 @@ export const DescriptionAcordeon: FC<DescriptionAcordeonProps> = ({
   items,
 }) => {
   const [openedItems, setOpenedItems] = useState<Array<number>>([]);
-  const toggleAccordionItem = (itemId: number): void => {
+  const toggleAccordionItem = (
+    itemId: number,
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ): void => {
+    //eslint-disable-next-line
+    //@ts-ignore
+    const contentElement = e.target.closest("li").querySelector(".jsContent");
     let newOpenedItems = [...openedItems];
     if (newOpenedItems.includes(itemId)) {
       newOpenedItems = newOpenedItems.filter(id => {
         return id !== itemId;
       });
+      anime({
+        targets: contentElement,
+        height: 0,
+        duration: 500,
+        easing: "easeInOutQuad",
+      });
     } else {
       newOpenedItems.push(itemId);
+      anime({
+        targets: contentElement,
+        height: (elem: HTMLElement) => elem.scrollHeight,
+        duration: 500,
+        easing: "easeInOutQuad",
+      });
     }
     setOpenedItems(newOpenedItems);
   };
@@ -33,7 +53,7 @@ export const DescriptionAcordeon: FC<DescriptionAcordeonProps> = ({
                 <div className={css.btnBox}>
                   <button
                     className={css.btn}
-                    onClick={() => toggleAccordionItem(id)}
+                    onClick={e => toggleAccordionItem(id, e)}
                   >
                     <h2 className={css.header}>{title}</h2>
                   </button>
@@ -41,15 +61,9 @@ export const DescriptionAcordeon: FC<DescriptionAcordeonProps> = ({
                     className={`${css.plus} ${
                       openedItems.includes(id) ? css.plusIsOpen : ""
                     }`}
-                  ></span>
+                  />
                 </div>
-                <p
-                  className={`${css.text} ${
-                    openedItems.includes(id) ? css.isOpen : ""
-                  }`}
-                >
-                  {content}
-                </p>
+                <div className={`${css.text} jsContent`}>{content}</div>
               </li>
             );
           })}
