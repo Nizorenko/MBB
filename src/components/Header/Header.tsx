@@ -12,13 +12,13 @@ import css from "./Header.module.css";
 import { HederProps } from "./types";
 
 const navList: Array<NavItem> = [
-  { title: "Каталог", url: "/category-1" },
-  { title: "Новости", url: "/category-2" },
-  { title: "Салоны", url: "/category-1/qwe" },
-  { title: "О компании", url: "/category" },
-  { title: "Франшиза", url: "/category" },
-  { title: "Контакты", url: "/category" },
-  { title: "Партнёрам", url: "/category" },
+  { title: "Каталог", url: "/category" },
+  { title: "Новости", url: "" },
+  { title: "Салоны", url: "" },
+  { title: "О компании", url: "" },
+  { title: "Франшиза", url: "" },
+  { title: "Контакты", url: "" },
+  { title: "Партнёрам", url: "" },
 ];
 
 export const Header: FC<HederProps> = ({ openPopup, className }) => {
@@ -40,7 +40,7 @@ export const Header: FC<HederProps> = ({ openPopup, className }) => {
               openPopup={openPopup}
               onClick={handler}
               isOpen={isOpen}
-              navList={navList}
+              items={navList}
             />
 
             <button className={css.linkSearch}>

@@ -1,6 +1,8 @@
 import { FC, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Zoom } from "swiper";
+import { Link } from "react-router-dom";
+
+import { Navigation } from "swiper";
 import { Swiper as SwiperClass } from "swiper/types";
 
 import { Container } from "../Container";
@@ -27,7 +29,7 @@ export const MainSwiper: FC<MainSwiperProps> = ({ items }) => {
         </div>
       </div>
       <Swiper
-        modules={[Navigation, Zoom]}
+        modules={[Navigation]}
         zoom={true}
         spaceBetween={50}
         slidesPerView={1}
@@ -36,12 +38,15 @@ export const MainSwiper: FC<MainSwiperProps> = ({ items }) => {
         onSwiper={updateActiveIndex}
         onSlideChange={updateActiveIndex}
       >
-        {items.map(({ id, img, alt }) => {
+        {items.map(({ id, title, img, url, alt }) => {
           return (
             <SwiperSlide key={id}>
-              <div className="swiper-zoom-container">
-                <img className={css.slidePhoto} src={img} alt={alt} />
-              </div>
+              <Link to={url}>
+                <div className={css.boxSlide}>
+                  <img className={css.slidePhoto} src={img} alt={alt} />
+                  <h2 className={css.sliadeTitle}>{title}</h2>
+                </div>
+              </Link>
             </SwiperSlide>
           );
         })}

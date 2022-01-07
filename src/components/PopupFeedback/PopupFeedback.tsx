@@ -17,10 +17,6 @@ export const PopupFeedback: FC<PopupFeedbackProps> = ({ isOpen, onClose }) => {
     if (isOpen) onClose();
   };
 
-  useEffect(() => {
-    document.body.style.overflow = isOpen ? "hidden" : "";
-  }, [isOpen]);
-
   return (
     <div className={popupClassName} onClick={handler}>
       <div className={css.body}>

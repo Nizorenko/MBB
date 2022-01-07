@@ -87,8 +87,15 @@
 }
 
 .btnArrowBack {
+  cursor: pointer;
+
   background-color: transparent;
   border: transparent;
+  transition: color 0.3s linear;
+}
+
+.btnArrowBack:hover {
+  color: var(--orange);
 }
 
 .form {
@@ -125,7 +132,7 @@
 
   padding-left: 24px;
 
-  color: var(--lightGrey);
+  color: var(--blak);
   font-family: var(--medium);
   font-size: var(--big);
 

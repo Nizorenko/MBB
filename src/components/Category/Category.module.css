@@ -11,11 +11,11 @@
   text-align: center;
 }
 
-.container {
+.boxCategory {
   position: relative;
 }
 
-.container::before {
+.boxCategory::before {
   position: absolute;
   top: 0;
   left: 0;
@@ -28,7 +28,7 @@
   background-color: var(--strokeGreyLight);
 }
 
-.container::after {
+.boxCategory::after {
   position: absolute;
   top: 100%;
   left: 0;
@@ -59,7 +59,7 @@
   display: block;
 }
 
-@media (min-width: 650px) {
+/* @media (min-width: 650px) {
   .itemOne {
     grid-column: span 2;
   }
@@ -69,7 +69,7 @@
   .itemOne {
     grid-column: 1;
   }
-}
+} */
 
 .cardIllustration {
   display: block;

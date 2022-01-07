@@ -5,6 +5,7 @@ import css from "./Button.module.css";
 
 export const Button: FC<IButton> = ({
   children,
+
   onClick,
   variant = "default",
   className = "",

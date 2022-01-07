@@ -11,6 +11,7 @@ export const BurgerButton: FC<BurgerProps> = ({
   const burgerButtonClass = `${css.burgerButton} ${
     isOpen ? css.isOpenNav : ""
   }`;
+
   return (
     <button className={burgerButtonClass} onClick={onClick}>
       navigation button

@@ -14,10 +14,35 @@
   color: var(--white);
 }
 
+.boxSlide {
+  position: relative;
+}
+
 .slidePhoto {
   display: block;
 
   max-width: 100%;
+}
+
+.sliadeTitle {
+  position: absolute;
+  top: 76%;
+  left: 0;
+
+  width: 100%;
+
+  padding-left: 32px;
+
+  font-size: var(--huge);
+  line-height: 44px;
+  font-family: var(--bold);
+  color: var(--white);
+}
+
+@media (min-width: 650px) {
+  .sliadeTitle {
+    top: 86%;
+  }
 }
 
 .prev {

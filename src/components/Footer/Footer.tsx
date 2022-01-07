@@ -8,6 +8,7 @@ import { ReactComponent as Instagram } from "@/assets/Instagram.svg";
 import { ReactComponent as Vk } from "@/assets/Vk.svg";
 import { ReactComponent as Facebook } from "@/assets/Facebook.svg";
 import { ReactComponent as Telegram } from "@/assets/Telegram.svg";
+import { ReactComponent as TrueShop } from "@/assets/TrueShop.svg";
 
 import css from "./Footer.module.css";
 
@@ -16,11 +17,10 @@ export const Footer: FC<FooterProps> = ({ className, openPopup }) => {
     <footer className={className}>
       <Container>
         <div className={css.nav}>
-          <div>
-            <div className={css.navLeft}>
-              <div>
-                <h2 className={css.header}>Каталог товаров</h2>
-              </div>
+          <div className={css.navGrid}>
+            <div className={css.navLeftCatalog}>
+              <h2 className={css.header}>Каталог товаров</h2>
+
               <ul>
                 <li>
                   <a className={css.link} href="#">
@@ -48,11 +48,33 @@ export const Footer: FC<FooterProps> = ({ className, openPopup }) => {
                   </a>
                 </li>
               </ul>
+              <ul>
+                <li>
+                  <a className={css.link} href="#">
+                    <h3 className={css.subtitle}>Новинки</h3>
+                  </a>
+                </li>
+                <li>
+                  <a className={css.link} href="#">
+                    <h3 className={css.subtitle}>Кресла</h3>
+                  </a>
+                </li>
+                <li>
+                  <a className={css.link} href="#">
+                    <h3 className={css.subtitle}>Бескаркасная мебель</h3>
+                  </a>
+                </li>
+                <li>
+                  <a className={css.link} href="#">
+                    <h3 className={css.subtitle}>Аксессуары</h3>
+                  </a>
+                </li>
+              </ul>
             </div>
-            <div className={css.navLeft}>
-              <div className={css.headerBox}>
-                <h2 className={css.header}>Информация</h2>
-              </div>
+
+            <div className={css.navLeftInfo}>
+              <h2 className={css.header}>Информация</h2>
+
               <ul>
                 <li>
                   <a className={css.link} href="#">
@@ -80,53 +102,28 @@ export const Footer: FC<FooterProps> = ({ className, openPopup }) => {
                   </a>
                 </li>
               </ul>
+              <ul>
+                <li>
+                  <a className={css.link} href="#">
+                    <h3 className={css.subtitle}>Дилерам</h3>
+                  </a>
+                </li>
+                <li>
+                  <a className={css.link} href="#">
+                    <h3 className={css.subtitle}>Дизайнерам</h3>
+                  </a>
+                </li>
+                <li>
+                  <a className={css.link} href="#">
+                    <h3 className={css.subtitle}>Кабинет партнера</h3>
+                  </a>
+                </li>
+              </ul>
             </div>
-          </div>
-          <div className={css.navRight}>
-            <ul>
-              <li>
-                <a className={css.link} href="#">
-                  <h3 className={css.subtitle}>Новинки</h3>
-                </a>
-              </li>
-              <li>
-                <a className={css.link} href="#">
-                  <h3 className={css.subtitle}>Кресла</h3>
-                </a>
-              </li>
-              <li>
-                <a className={css.link} href="#">
-                  <h3 className={css.subtitle}>Бескаркасная мебель</h3>
-                </a>
-              </li>
-              <li>
-                <a className={css.link} href="#">
-                  <h3 className={css.subtitle}>Аксессуары</h3>
-                </a>
-              </li>
-            </ul>
-
-            <ul>
-              <li>
-                <a className={css.link} href="#">
-                  <h3 className={css.subtitle}>Дилерам</h3>
-                </a>
-              </li>
-              <li>
-                <a className={css.link} href="#">
-                  <h3 className={css.subtitle}>Дизайнерам</h3>
-                </a>
-              </li>
-              <li>
-                <a className={css.link} href="#">
-                  <h3 className={css.subtitle}>Кабинет партнера</h3>
-                </a>
-              </li>
-            </ul>
           </div>
         </div>
         <div className={css.social}>
-          <a href="/">
+          <a href="/" className={css.linkLogo}>
             <Logo className={css.logo} />
           </a>
 
@@ -138,6 +135,10 @@ export const Footer: FC<FooterProps> = ({ className, openPopup }) => {
               info@kirovmebel.ru
             </a>
           </div>
+
+          <button onClick={openPopup} className={css.feedback}>
+            Обратная связь
+          </button>
           <ul className={css.list}>
             <li>
               <a href="#">
@@ -160,9 +161,21 @@ export const Footer: FC<FooterProps> = ({ className, openPopup }) => {
               </a>
             </li>
           </ul>
-          <button onClick={openPopup} className={css.feedback}>
-            Обратная связь
-          </button>
+        </div>
+        <div className={css.copyrightBox}>
+          <div>
+            <span className={css.nameCompany}>
+              © 2021 Группа компаний «Мебель Братьев Баженовых»
+            </span>
+            <p className={css.textCopyright}>
+              Продолжая использовать наш сайт, вы даете согласие на обработку
+              файлов Cookies и других пользовательских данных, в соответствии с
+              Политикой конфиденциальности.
+            </p>
+          </div>
+          <a href="https://true-studio.ru/">
+            <TrueShop className={css.logoCopyright} />
+          </a>
         </div>
       </Container>
     </footer>

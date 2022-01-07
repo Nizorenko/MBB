@@ -4,7 +4,7 @@ import anime from "animejs";
 
 import { Container } from "../Container";
 
-import { DescriptionAcordeonProps, AccordionItem } from "./types";
+import { DescriptionAcordeonProps } from "./types";
 
 import css from "./DescriptionAcordeon.module.css";
 

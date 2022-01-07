@@ -10,12 +10,24 @@
   color: var(--greyTextSecond);
 }
 
+@media (min-width: 650px) {
+  .subtitle {
+    font-size: var(--small);
+  }
+}
+
 .header {
   margin-bottom: 24px;
 
   font-size: var(--biggest);
   line-height: 35px;
   font-family: var(--bold);
+}
+
+@media (min-width: 1051px) {
+  .header {
+    font-size: var(--huge);
+  }
 }
 
 .textBox {
@@ -34,6 +46,12 @@
   color: var(--greyTextSecond);
 }
 
+@media (min-width: 1051px) {
+  .text {
+    font-size: var(--slightlyMore);
+  }
+}
+
 .list {
   display: grid;
   grid-template-columns: auto;
@@ -45,12 +63,13 @@
   margin-bottom: 40px;
 }
 
-@media (min-width: 650px) {
+@media (min-width: 400px) {
   .list {
     grid-template-columns: auto auto auto;
     column-gap: 26px;
   }
 }
+
 .item {
   display: grid;
   grid-template-columns: auto;
@@ -58,11 +77,19 @@
 }
 
 .number {
+  margin-bottom: 15px;
+
   font-size: var(--huge);
   line-height: 57px;
   font-family: var(--bold);
 
   color: var(--black);
+}
+
+@media (min-width: 1051px) {
+  .number {
+    font-size: var(--megaHuge);
+  }
 }
 
 .fragmentText {
@@ -71,6 +98,12 @@
   font-family: var(--regular);
 
   color: var(--greyTextSecond);
+}
+
+@media (min-width: 1051px) {
+  .fragmentText {
+    font-size: var(--slightlyMore);
+  }
 }
 
 .btn {
@@ -86,6 +119,10 @@
 
 .boxFeedback {
   position: relative;
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+  white-space: nowrap;
 }
 
 .boxFeedback::after {
@@ -114,19 +151,41 @@
 
 .feedback {
   display: grid;
-  grid-template-columns: auto auto;
-  column-gap: 76px;
+  grid-template-columns: auto;
+
   align-items: center;
   justify-items: center;
 }
 
+@media (min-width: 650px) {
+  .feedback {
+    grid-template-columns: auto auto;
+    column-gap: 176px;
+    align-items: center;
+    justify-content: start;
+  }
+}
+
 .feedbackHeader {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 18px;
+  padding-bottom: 16px;
 
   font-size: var(--big);
   line-height: 22px;
   font-family: var(--bold);
+}
+
+@media (min-width: 650px) {
+  .feedbackHeader {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+@media (min-width: 1051px) {
+  .feedbackHeader {
+    font-size: var(--large);
+  }
 }
 
 .feedbackLink {
@@ -140,9 +199,25 @@
 }
 
 .feedbackText {
+  padding-top: 12px;
+  padding-bottom: 12px;
+
   font-size: var(--small);
   line-height: 17px;
   font-family: var(--regular);
 
   color: var(--greyTextSecond);
+}
+
+@media (min-width: 650px) {
+  .feedbackText {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+}
+
+@media (min-width: 1051px) {
+  .feedbackText {
+    font-size: var(--slightlyMore);
+  }
 }
