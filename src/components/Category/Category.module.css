@@ -59,6 +59,28 @@
   display: block;
 }
 
+.link:hover .activeHover {
+  opacity: 1;
+}
+
+.cardIllustration {
+  display: block;
+  max-width: 750px;
+  max-height: 500px;
+  width: 100%;
+}
+
+.activeHover {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  transition: opacity 0.5s linear;
+  opacity: 0;
+}
+
 /* @media (min-width: 650px) {
   .itemOne {
     grid-column: span 2;
@@ -70,14 +92,6 @@
     grid-column: 1;
   }
 } */
-
-.cardIllustration {
-  display: block;
-
-  max-width: 750px;
-  max-height: 500px;
-  width: 100%;
-}
 
 .cardTitle {
   position: absolute;
@@ -155,7 +169,7 @@
 
 .text {
   font-size: var(--small);
-  line-height: var(--big);
+  line-height: 20px;
   font-family: var(--regular);
 
   color: var(--greyTextSecond);

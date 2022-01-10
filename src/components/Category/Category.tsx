@@ -21,13 +21,18 @@ export const Category: FC<CategoryProps> = ({ className, items }) => {
         <Container>
           <div className={css.container}>
             <ul className={css.list}>
-              {items.map(({ id, img, title, number, url, alt }) => {
+              {items.map(({ id, img, imgHover, title, number, url, alt }) => {
                 return (
                   <li key={id} className={css.itemOne}>
                     <Link key={title} className={css.link} to={url}>
                       <img
                         className={css.cardIllustration}
                         src={img}
+                        alt={alt}
+                      />
+                      <img
+                        className={`${css.cardIllustration} ${css.activeHover}`}
+                        src={imgHover}
                         alt={alt}
                       />
                       <div className={css.cardTitle}>

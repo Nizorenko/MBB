@@ -1,22 +1,24 @@
 import { useParams } from "react-router";
 
-import { SwiperPreview, SwiperPreviewSlide } from "@/components/SwiperPreview";
+import { SwiperProduct, SwiperProductSlide } from "@/components/SwiperProduct";
 import {
   DescriptionAcordeon,
   AccordionItem,
 } from "@/components/DescriptionAcordeon";
 
 import Material1 from "@/assets/Material1.png";
+import Material2 from "@/assets/Material2.png";
+import Material3 from "@/assets/Material3.png";
+import Material4 from "@/assets/Material4.png";
+import Material5 from "@/assets/Material5.png";
+import Material6 from "@/assets/Material6.png";
 
-import mainSlide1 from "@/assets/mainSlide1.jpg";
-import mainSlide2 from "@/assets/mainSlide2.jpg";
-import mainSlide3 from "@/assets/mainSlide3.jpg";
-import mainSlide4 from "@/assets/mainSlide4.jpg";
-import mainSlide5 from "@/assets/mainSlide5.jpg";
+import mainSlide1 from "@/assets/categorySofaPhoto2.jpg";
+import mainSlide2 from "@/assets/categorySofaPhoto3.jpg";
 
 import css from "./Profuct.module.css";
 
-const swiperSlides: Array<SwiperPreviewSlide> = [
+const swiperSlides: Array<SwiperProductSlide> = [
   {
     id: 0,
     img: mainSlide1,
@@ -29,32 +31,32 @@ const swiperSlides: Array<SwiperPreviewSlide> = [
   },
   {
     id: 2,
-    img: mainSlide3,
+    img: mainSlide1,
     alt: "Photo3",
   },
   {
     id: 3,
-    img: mainSlide4,
+    img: mainSlide2,
     alt: "Photo4",
   },
   {
     id: 4,
-    img: mainSlide5,
+    img: mainSlide1,
     alt: "Photo5",
   },
   {
     id: 5,
-    img: mainSlide1,
+    img: mainSlide2,
     alt: "Photo6",
   },
   {
     id: 6,
-    img: mainSlide2,
+    img: mainSlide1,
     alt: "Photo7",
   },
   {
     id: 7,
-    img: mainSlide3,
+    img: mainSlide2,
     alt: "Photo8",
   },
 ];
@@ -86,29 +88,33 @@ const accordeonItems: Array<AccordionItem> = [
             <span>Велюр</span>
             <img src={Material1} alt="" />
           </li>
-          <li>
+          <li className={css.item}>
             <span>Замша</span>
-            <img src={Material1} alt="" />
+            <img src={Material2} alt="" />
           </li>
-          <li>
+          <li className={css.item}>
+            <span>Шеннил</span>
+            <img src={Material3} alt="" />
+          </li>
+          <li className={css.item}>
+            <span>Жаккард</span>
+            <img src={Material4} alt="" />
+          </li>
+          <li className={css.item}>
+            <span>Рогожка</span>
+            <img src={Material5} alt="" />
+          </li>
+          <li className={css.item}>
+            <span>Гобелен</span>
+            <img src={Material6} alt="" />
+          </li>
+          <li className={css.item}>
             <span>Велюр</span>
             <img src={Material1} alt="" />
           </li>
-          <li>
+          <li className={css.item}>
             <span>Замша</span>
-            <img src={Material1} alt="" />
-          </li>
-          <li>
-            <span>Велюр</span>
-            <img src={Material1} alt="" />
-          </li>
-          <li>
-            <span>Замша</span>
-            <img src={Material1} alt="" />
-          </li>
-          <li>
-            <span>Велюр</span>
-            <img src={Material1} alt="" />
+            <img src={Material2} alt="" />
           </li>
         </ul>
       </>
@@ -121,7 +127,12 @@ const accordeonItems: Array<AccordionItem> = [
     content: (
       <>
         <ul>
-          <li></li>
+          <li>
+            <img className={css.photo} src={mainSlide1} alt="" />
+          </li>
+          <li>
+            <img className={css.photo} src={mainSlide2} alt="" />
+          </li>
         </ul>
       </>
     ),
@@ -133,7 +144,7 @@ export default function Product() {
   console.log(params);
   return (
     <>
-      <SwiperPreview items={swiperSlides} />
+      <SwiperProduct items={swiperSlides} />
       <DescriptionAcordeon
         items={accordeonItems}
         className={css.descriptionAcordeon}

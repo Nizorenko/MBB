@@ -2,7 +2,10 @@
   display: grid;
   grid-template-columns: auto auto;
   justify-content: space-between;
+
   margin-bottom: 32px;
+
+  cursor: pointer;
 }
 
 .item {
@@ -27,6 +30,7 @@
 
   border: transparent;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .plus {
@@ -81,5 +85,8 @@
 
 .text {
   height: 0;
+
+  margin-bottom: 25px;
+
   overflow: hidden;
 }

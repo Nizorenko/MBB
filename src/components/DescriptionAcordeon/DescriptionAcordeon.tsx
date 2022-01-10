@@ -15,7 +15,7 @@ export const DescriptionAcordeon: FC<DescriptionAcordeonProps> = ({
   const [openedItems, setOpenedItems] = useState<Array<number>>([]);
   const toggleAccordionItem = (
     itemId: number,
-    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+    e: React.MouseEvent<HTMLDivElement, MouseEvent>
   ): void => {
     //eslint-disable-next-line
     //@ts-ignore
@@ -50,11 +50,11 @@ export const DescriptionAcordeon: FC<DescriptionAcordeonProps> = ({
           {items.map(({ id, title, content }) => {
             return (
               <li key={id} className={css.item}>
-                <div className={css.btnBox}>
-                  <button
-                    className={css.btn}
-                    onClick={e => toggleAccordionItem(id, e)}
-                  >
+                <div
+                  className={css.btnBox}
+                  onClick={e => toggleAccordionItem(id, e)}
+                >
+                  <button className={css.btn}>
                     <h2 className={css.header}>{title}</h2>
                   </button>
                   <span

@@ -65,6 +65,7 @@ const categoryItems: Array<CategoryItems> = [
   {
     id: 0,
     img: categoryPhoto1,
+    imgHover: categoryPhoto2,
     url: "/category-1",
     title: "Модульные диваны",
     number: 24,
@@ -73,6 +74,7 @@ const categoryItems: Array<CategoryItems> = [
   {
     id: 1,
     img: categoryPhoto2,
+    imgHover: categoryPhoto1,
     url: "/category-2",
     title: "Кресла",
     number: 6,
@@ -81,6 +83,7 @@ const categoryItems: Array<CategoryItems> = [
   {
     id: 2,
     img: categoryPhoto3,
+    imgHover: categoryPhoto1,
     url: "/category-3",
     title: "Новинки",
     number: 13,
@@ -89,6 +92,7 @@ const categoryItems: Array<CategoryItems> = [
   {
     id: 3,
     img: categoryPhoto4,
+    imgHover: categoryPhoto1,
     url: "/category-4",
     title: "Классическая мебель",
     number: 48,
@@ -97,6 +101,7 @@ const categoryItems: Array<CategoryItems> = [
   {
     id: 4,
     img: categoryPhoto5,
+    imgHover: categoryPhoto1,
     url: "/category-5",
     title: "Диваны",
     number: 27,
@@ -105,6 +110,7 @@ const categoryItems: Array<CategoryItems> = [
   {
     id: 5,
     img: categoryPhoto1,
+    imgHover: categoryPhoto2,
     url: "/category-6",
     title: "Кровати",
     number: 9,

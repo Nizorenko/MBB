@@ -8,12 +8,15 @@ import { Gallery, Item } from "react-photoswipe-gallery";
 import { Container } from "../Container";
 
 import { ReactComponent as LongArrow } from "@/assets/LongArrow.svg";
+import { ReactComponent as Icon3D } from "@/assets/Icon3D.svg";
+import { ReactComponent as Material1 } from "@/assets/material1.svg";
+import { ReactComponent as Material2 } from "@/assets/material2.svg";
 
-import { SwiperPreviewProps } from "./types";
+import { SwiperProductProps } from "./types";
 
-import css from "./SwiperPreview.module.css";
+import css from "./SwiperProduct.module.css";
 
-export const SwiperPreview: FC<SwiperPreviewProps> = ({ className, items }) => {
+export const SwiperProduct: FC<SwiperProductProps> = ({ className, items }) => {
   const prefix = useMemo<string>(
     () => (items.length < 10 ? "0" : ""),
     [items.length]
@@ -35,7 +38,8 @@ export const SwiperPreview: FC<SwiperPreviewProps> = ({ className, items }) => {
           <Swiper
             modules={[Navigation, Pagination, Thumbs, FreeMode]}
             pagination={{
-              progressbarFillClass: css.colorProgressBar,
+              progressbarFillClass: `${css.colorProgressBar}`,
+
               clickable: true,
               type: "progressbar",
             }}
@@ -55,7 +59,7 @@ export const SwiperPreview: FC<SwiperPreviewProps> = ({ className, items }) => {
                     original={img}
                     thumbnail={img}
                     width="1920"
-                    height="1080"
+                    height="1300"
                   >
                     {({ ref, open }) => (
                       <img
@@ -71,6 +75,15 @@ export const SwiperPreview: FC<SwiperPreviewProps> = ({ className, items }) => {
                 </SwiperSlide>
               );
             })}
+            <div className={css.boxItem}>
+              <button className={css.btn3D}>
+                <Icon3D className={css.icon3D} />
+              </button>
+              <div className={css.boxMaterial}>
+                <Material1 className={css.material} />
+                <Material2 className={css.material} />
+              </div>
+            </div>
 
             <div className={css.boxPagination}>
               <button className={css.prev}>

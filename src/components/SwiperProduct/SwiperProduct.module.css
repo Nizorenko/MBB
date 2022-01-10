@@ -3,7 +3,7 @@
   line-height: 24px;
   font-family: var(--semibold);
 
-  color: var(--white);
+  color: var(--greyTextSecond);
 }
 
 .boxImg {
@@ -30,7 +30,57 @@
   display: block;
 
   max-height: 100%;
-  max-width: 100%;
+  width: 100%;
+}
+
+.btn3D {
+  width: 44px;
+  height: 44px;
+
+  padding: 3px 4px;
+
+  margin: 0;
+
+  border: none;
+  background-color: transparent;
+  box-shadow: 0px 0px 0px 1px var(--strokeGreyLight) inset;
+}
+
+.icon3D {
+  display: block;
+
+  width: 33px;
+  height: 33px;
+
+  margin: 0;
+}
+
+.boxItem {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+
+  width: 100%;
+
+  padding: 0 32px;
+  margin-top: 24px;
+}
+
+@media (min-width: 650px) {
+  .boxItem {
+    margin-top: 32px;
+  }
+}
+
+.boxMaterial {
+  display: grid;
+  grid-template-columns: auto;
+  row-gap: 8px;
 }
 
 .boxPagination {
@@ -82,7 +132,7 @@
   width: 46px;
   height: 14px;
 
-  color: var(--white);
+  color: var(--black);
 }
 
 .next svg {

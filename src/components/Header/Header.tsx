@@ -28,6 +28,10 @@ export const Header: FC<HederProps> = ({ openPopup, className }) => {
     setIsOpen(!isOpen);
   };
 
+  const closeMenu = (): void => {
+    setIsOpen(false);
+  };
+
   return (
     <header className={className}>
       <Container>
@@ -38,7 +42,7 @@ export const Header: FC<HederProps> = ({ openPopup, className }) => {
           <div className={css.itemsBox}>
             <Menu
               openPopup={openPopup}
-              onClick={handler}
+              onClick={closeMenu}
               isOpen={isOpen}
               items={navList}
             />

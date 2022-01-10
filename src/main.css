@@ -11,7 +11,7 @@
   --greyTextSecond: #9f9f9f;
   --strokeGreyLight: #eaeaea;
 
-  /* font sizes and line height */
+  /* font sizes */
 
   --lessSmall: 9px;
   --smallest: 12px;
@@ -34,6 +34,15 @@
 
   --desktop: 1051px;
   --tablet: 650px;
+}
+
+.swiper-pagination-progressbar {
+  top: auto !important;
+  bottom: 0;
+}
+
+.swiper-slide-thumb-active {
+  filter: none !important;
 }
 
 @font-face {
