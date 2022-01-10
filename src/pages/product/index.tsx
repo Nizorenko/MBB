@@ -126,7 +126,7 @@ const accordeonItems: Array<AccordionItem> = [
     title: "Фото в интерьере",
     content: (
       <>
-        <ul>
+        <ul className={css.list}>
           <li>
             <img className={css.photo} src={mainSlide1} alt="" />
           </li>
